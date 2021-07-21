@@ -1,0 +1,18 @@
+body{
+    font-size:12pt;
+    font-family:Arial, Tahoma, sans-serif;
+}
+h2{
+    font-size:1.3em;
+    font-weight:bold;
+    font-family:Arial, Tahoma, sans-serif;
+} 
+#abc{
+    font-size:1.1em;
+    font-weight:bold;
+    font-family:Arial, Tahoma, sans-serif;
+    color:rgb(94,11,11);
+}
+table{
+    width:100%;
+}
