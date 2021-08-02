@@ -2,8 +2,8 @@
 
 $( () => {
     console.log("We are locked and loaded!");
-
-    getUserById(2);
+    getAllUsers();
+    //getUserById(2);
 });
 
 const getUserById = (id) => {
