@@ -1,22 +1,24 @@
-
-
 $( () => {
-    console.log("We are locked and loaded!");
-
-    $("#zGet").on("click", () => {
-        let id= $("#zId").val();
+    // $("#zGet").on("click", () => {
+    //     let id = $("#zId").val();
+    let urlParms = parseUrl();
+    let id = +urlParms.id;
         vendorGetById(id)
-        .done(res => {
-            console.debug(res);
-            display(res);
-        })
-        .fail(err => console.error(err));
-    });
-    $("#save").on("click", () => {
-        change();
+            .done(res => {
+                console.debug(res);
+                display(res);
+            })
+            .fail (err => {
+                $("#message").html("</b>Vendor not found!</b>");
+                console.error(err);
     });
 
+    $("#save").on("click", () => {
+       update();
+
+    });
 });
+
 
 const display = (vendor) => {
     $("#xId").val(vendor.id);
@@ -46,7 +48,8 @@ const change = () => {
     vendorUpdate(vendor)
         .done(res => {
             console.debug(res);
-            console.log("Update successful!");  
+            console.log("Update successful!"); 
+            window.location.href = "../getall/vendor-getall.html";
         })
         .fail(err => {
             console.error(err);
