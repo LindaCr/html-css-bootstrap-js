@@ -2,15 +2,24 @@
 $( () => {
     console.log("We are locked and loaded!");
 
-    $("#zGet").on("click", () => {
-        let id= $("#zId").val();
+    let urlParm= parseUrl();
+    let id= +urlParm.id;
         vendorGetById(id)
             .done(res => {
                 console.debug(res);
                 display(res);
             })
             .fail(err => console.error(err));
-    });
+
+    // $("#zGet").on("click", () => {
+    //     let id= $("#zId").val();
+    //     vendorGetById(id)
+    //         .done(res => {
+    //             console.debug(res);
+    //             display(res);
+    //         })
+    //         .fail(err => console.error(err));
+    // });
 });
 
 const display = (vendor) => {
