@@ -1,4 +1,4 @@
-console.log("ok");
+console.log("Aunt Linda is the best ever!");
 
 let nbr=0;
 
