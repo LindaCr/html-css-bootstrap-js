@@ -5,3 +5,15 @@ div{
     width:49%;
     text-align:center;
 }
+h1{
+    font-weight:bold;
+    font-style:italic;
+    color:aqua;
+}
+.blue{
+    font-style:oblique;
+    color:blue;
+}
+#red{
+    color:red;
+}
